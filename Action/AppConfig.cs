@@ -597,14 +597,14 @@ namespace CYQ.Data
              */
             /// <summary>
             /// MAction 操作 Oracle 时自增加int类型ID所需要配置的序列ID，Guid为ID则不用。
-            /// 如果需要为每个表都配置一个序列号，可以使用：SEQ_{0} 其中{0}会自动配对成表名，如果没有{0}，则为整个数据库共用一个序列。
-            /// 默认参数值：SEQ_{0}
+            /// 如果需要为每个表都配置一个序列号，可以使用：SEQ_{0}_ID 其中{0}会自动配对成表名，如果没有{0}，则为整个数据库共用一个序列。
+            /// 默认参数值：SEQ_{0}_ID
             /// </summary>
             public static string AutoID
             {
                 get
                 {
-                    return GetApp("AutoID", "SEQ_{0}");
+                    return GetApp("AutoID", "SEQ_{0}_ID");
                 }
                 set
                 {
